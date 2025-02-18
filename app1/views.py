@@ -6,3 +6,7 @@ def home(request):
 # Create your views here.
 def myfun(request):
     return HttpResponse("Hello, Arvind!")
+
+def math(request):
+    l = 10+20
+    return HttpResponse('The sum is {}'.format(l))
