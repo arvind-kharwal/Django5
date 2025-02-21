@@ -7,6 +7,9 @@ def home(request):
 def myfun(request):
     return HttpResponse("Hello, Arvind!")
 
+def blog(request):
+    return HttpResponse("Hello, Blog!")
+
 def math(request):
     l = 10+20
     return HttpResponse('The sum is {}'.format(l))
