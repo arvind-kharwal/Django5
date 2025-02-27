@@ -16,10 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from app1 import views
+from app1 import views as ap1
+from app2 import views as ap2
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('', views.home,name='home'),
-    path('', include('app1.urls')),
+    path('',ap1.home,name='Home'),
+    path('app2fun/',ap2.app2fun,name='App 2 Fun'),
+    path('app1/',include('app1.urls')),
+    path('app2/',include('app2.urls')),
+    
 ]
