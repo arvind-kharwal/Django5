@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Document</title>
+</head>
+<body>
+    <h1>All Document</h1>
+    {{data}}
+    <br/>
+    {% if data %}
+        <h2>Data List: </h2>
+    {% else %}
+        <h2>No Data Found</h2>
+    {% endif %}
+    <br/>
+    <ul>
+        {% for item in data %}
+            <b><li>{{item.name}} - {{item.email}} - {{item.phone}} - {{item.age}}</li></b>
+        {% endfor %}
+</body>
+</html>

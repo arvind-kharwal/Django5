@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from app2.models import Profile
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -17,3 +19,8 @@ def fastapi(request):
     #return render(request,'app2/fastapi.html',context=f1)
     #return render(request,'app2/fastapi.html',context={'c2':'Python'})
     return render(request,'app2/fastapi.html',d1)
+
+def all(request):
+    data = Profile.objects.all()
+    print(data)
+    return render(request,'app2/all.html',{'data':data})
