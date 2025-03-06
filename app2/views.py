@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from app2.models import Profile
-from django.http import HttpResponse
+from app2.forms import Registration
 
 # Create your views here.
 
@@ -24,3 +24,7 @@ def all(request):
     data = Profile.objects.all()
     print(data)
     return render(request,'app2/all.html',{'data':data})
+
+def register(request):
+    fm = Registration()
+    return render(request,'app2/register.html',{'form':fm})
