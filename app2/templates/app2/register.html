@@ -28,8 +28,32 @@
 </head>
 <body>
     <h1> Registerations</h1>
-    
+    {% comment %}
+    <form action="" method="post">
+        <table>
+            {{form}}
+        </table>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+    {% endcomment %}
     <hr>
+    {% comment %}
+    <form action="" method="post">
+        <table>
+            {{form.as_p}}
+        </table>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+    <hr>
+    {% endcomment %}
+    <form action="" method="post">
+        <table>
+            {{form.first_name}}
+            {{form.last_name}}
+        </table>
+    </form>
+    <hr>
+
     <form action="" method="post">
         <table>
             {{form.as_table}}
